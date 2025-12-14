@@ -64,7 +64,8 @@
 
 #### Задание 1
 
-
+Практически аналогичное задание выполнлось в рамках задания - Подъём инфраструктуры в облаке.
+Выполнение описано [тут](https://docs.google.com/document/d/1xKMpHyYK11lwJGAojK_we5xmyRfSXqvPywoGgGLBIxA/edit?usp=sharing)
 
 #### Задание 2
 
