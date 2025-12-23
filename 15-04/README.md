@@ -26,4 +26,8 @@ Hey, Netology
 
 ### Решение 1.
 
+Установил docker и docker compose
+
+![alt text](Pictures/pic01.jpg)
+
 
