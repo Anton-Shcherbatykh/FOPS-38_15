@@ -130,11 +130,14 @@ Hey, Netology
 7. Отредактировал файл "/etc/nginx/conf.d/default.conf", заменив порт "listen 80" на "listen 81"
 8. Выполнил команду ```nginx -s reload```,
    - а затем внутри контейнера ```curl http://127.0.0.1:80```
-
-![alt text](Pictures/pic012.jpg)
-     
    - затем  ```curl http://127.0.0.1:81```
+9. И вышел из консоли с помощью команды ```exit```
+  
+   ![alt text](Pictures/pic012.jpg)
 
-   - и вышел из консоли с помощью команды ```exit```
+10. Проверил вывод команд:
+11. - ```ss -tlpn | grep 127.0.0.1:8080```
+    - ```docker port custom-nginx-t2```
+    - ```curl http://127.0.0.1:8080.```
 
 ![alt text](Pictures/pic013.jpg)
