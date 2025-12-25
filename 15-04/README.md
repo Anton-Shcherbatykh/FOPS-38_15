@@ -164,6 +164,8 @@ Hey, Netology
 
 12. Удаляю запущенный контейнер "custom-nginx-t2", не останавливая его. Это возмоэжно выполнить с помощью команды ```docker rm -f custom-nginx-t2``` (с флагом ```-f``` (force)).
 
+Проверяю, что контейнер удалён ```docker ps -a | grep custom-nginx-t2```
+
 ![alt text](Pictures/pic016.jpg)
 
 ---
