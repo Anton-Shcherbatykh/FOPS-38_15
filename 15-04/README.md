@@ -136,7 +136,7 @@ Hey, Netology
    ![alt text](Pictures/pic012.jpg)
 
 10. Проверил вывод команд:
-11. - ```ss -tlpn | grep 127.0.0.1:8080```
+    - ```ss -tlpn | grep 127.0.0.1:8080```
     - ```docker port custom-nginx-t2```
     - ```curl http://127.0.0.1:8080.```
 
