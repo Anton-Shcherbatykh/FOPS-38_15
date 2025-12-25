@@ -30,4 +30,8 @@ Hey, Netology
 
 ![alt text](Pictures/pic01.jpg)
 
+Скачал образ nginx:1.29.0. Создал ```index.html``` c содержимым из задания. Создал ```dockerfile``` в котором реализовал замену дефолтной стартовой страницы на созданную.
+
+![alt text](Pictures/pic04.jpg)
+
 
