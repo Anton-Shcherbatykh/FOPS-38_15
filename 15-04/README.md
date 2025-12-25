@@ -36,4 +36,57 @@ Hey, Netology
 
 ![alt text](Pictures/pic04.jpg)
 
+- Собрал и отправил созданный образ в свой dockerhub-репозиторий c tag 1.0.0
+
+![alt text](Pictures/pic02.jpg)
+
+![alt text](Pictures/pic03.jpg)
+
+[Ссылка на репозиторий](https://hub.docker.com/repository/docker/anton13th/custom-nginx/general)
+
+---
+
+### Задача 2
+
+Запустите ваш образ custom-nginx:1.0.0 командой docker run в соответвии с требованиями:
+- имя контейнера "ФИО-custom-nginx-t2"
+- контейнер работает в фоне
+- контейнер опубликован на порту хост системы 127.0.0.1:8080
+  
+Не удаляя, переименуйте контейнер в "custom-nginx-t2"
+
+Выполните команду date +"%d-%m-%Y %T.%N %Z" ; sleep 0.150 ; docker ps ; ss -tlpn | grep 127.0.0.1:8080  ; docker logs custom-nginx-t2 -n1 ; docker exec -it custom-nginx-t2 base64 /usr/share/nginx/html/index.html
+
+Убедитесь с помощью curl или веб браузера, что индекс-страница доступна.
+
+В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
+
+
+### Решение 2.
+
+Запустил образ с соблюдением требований в задании
+
+![alt text](Pictures/pic05.jpg)
+
+Проверим через браузер
+
+![alt text](Pictures/pic05_1.jpg)
+
+Выполнил команду из задания 
+
+```date +"%d-%m-%Y %T.%N %Z" ; sleep 0.150 ; docker ps ; ss -tlpn | grep 127.0.0.1:8080  ; docker logs custom-nginx-t2 -n1 ; docker exec -it custom-nginx-t2 base64 /usr/share/nginx/html/index.html```
+
+Результат выполнения команды
+
+![alt text](Pictures/pic06.jpg)
+
+Проверяем доступность индекс-страницы через браузер
+
+![alt text](Pictures/pic07.jpg)
+
+и через ```curl```
+
+![alt text](Pictures/pic08.jpg)
+
+
 
