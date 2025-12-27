@@ -250,8 +250,62 @@ services:
 
 ### Решение 5.
 
+Создал отдельную директорию ```shcherbatykh@VM2:~/custom-nginx/task5``` и файлы ```compose.yaml``` + ```docker-compose.yaml``` с содержимым из задания. ВЫполнил команду ```docker compose up -d```. Был запущен файл ```compose.yaml```. Docker Compose имеет определённый порядок поиска файлов конфигурации. 
 
+По умолчанию он ищет файлы в следующем порядке приоритета:
 
-7. Ошибка возникает, потому что после удаления compose.yaml Docker Compose не находит ни одного файла конфигурации с подходящим именем в порядке приоритета.
+compose.yaml (высший приоритет)
+
+compose.yml
+
+docker-compose.yaml
+
+docker-compose.yml (низший приоритет)
+
+![alt text](Pictures/pic019.jpg)
+
+![alt text](Pictures/pic020.jpg)
+
+Отредактировал файл ```compose.yaml``` так, чтобы были запущенны оба файла.
+
+![alt text](Pictures/pic021.jpg)
+
+![alt text](Pictures/pic022.jpg)
+
+Выполнил в консоли хостовой ОС необходимые команды, чтобы залить образ ```custom-nginx``` как ```custom-nginx:latest``` в запущенное мной локальное registry.
+
+![alt text](Pictures/pic022.jpg)
+
+![alt text](Pictures/pic023.jpg)
+
+Открыл страницу "https://127.0.0.1:9000" и произвёл начальную настройку portainer (логин и пароль адмнистратора).
+
+![alt text](Pictures/pic024.jpg)
+
+![alt text](Pictures/pic025.jpg)
+
+Открыл страницу ```"http://127.0.0.1:9000/#!/home"```, выбралс своё local окружение. Перешёл на вкладку "stacks" и в "web editor" задеплоил компоуз из задания
+
+Перешёл на страницу ```"http://127.0.0.1:9000/#!/2/docker/containers"```, выбрал контейнер с ```nginx``` и нажал на кнопку "inspect". В представлении ```<> Tree``` развернул поле "Config" и сделал скриншот от поля ```"AppArmorProfile"``` до ```"Driver"```
+
+![alt text](Pictures/pic026.jpg)
+
+![alt text](Pictures/pic027.jpg)
+
+Удалил ```"compose.yaml```". Выполните команду "docker compose up -d".
+
+Получил сообщение (см.скрин)
+
+![alt text](Pictures/pic028.jpg)
+
+Ошибка возникает, потому что после удаления compose.yaml Docker Compose не находит ни одного файла конфигурации с подходящим именем в порядке приоритета.
+
+Чтобы выполнить следующее задание, пришлось восстановить ```compose.yaml``` и только после этого удалось погасить compose-проект.
+
+![alt text](Pictures/pic029_0.jpg)
+
+Проверяем через браузер
+
+![alt text](Pictures/pic029.jpg)
 
 
