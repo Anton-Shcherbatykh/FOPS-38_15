@@ -15,3 +15,18 @@
 (Необязательная часть, *) Изучите инструкцию в проекте и запустите web-приложение без использования docker, с помощью venv. (Mysql БД можно запустить в docker run).
 
 (Необязательная часть, *) Изучите код приложения и добавьте управление названием таблицы через ENV переменную.
+
+### Ответ 1
+
+[Ссылка на репозиторий](https://github.com/Anton-Shcherbatykh/FOPS-38_15-05)
+
+Файл ```Dockerfile.python```
+
+```bash
+FROM python:3.9-slim
+WORKDIR /app
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
+COPY main.py ./
+CMD ["python", "main.py"]
+```
