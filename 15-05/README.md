@@ -2,7 +2,7 @@
 
 ### Задача 1
 
-Сделайте в своем GitHub пространстве fork репозитория.
+Сделайте в своем GitHub пространстве fork [репозитория](https://github.com/netology-code/shvirtd-example-python).
 
 Создайте файл Dockerfile.python на основе существующего Dockerfile:
 
