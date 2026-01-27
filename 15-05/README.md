@@ -23,10 +23,19 @@
 Файл ```Dockerfile.python```
 
 ```bash
+# Используем официальный образ Python
 FROM python:3.12-slim
+# Устанавливаем рабочую директорию внутри контейнера
 WORKDIR /app
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
-COPY main.py ./
-CMD ["python", "main.py"]
+# Копируем файл зависимостей
+COPY requirements.txt .
+# Устанавливаем зависимости
+RUN pip install --no-cache-dir -r requirements.txt
+# Копируем весь код проекта в рабочую директорию
+COPY main.py .
+# Запускаем приложение с помощью uvicorn, делая его доступным по сети
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]
 ```
+
+Протестировал корректность сборки
+![alt text](Pictures/pic01.jpg)
