@@ -65,3 +65,33 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]
 ![alt text](Pictures/pic03.jpg)
 
 ![alt text](Pictures/pic03_1.jpg)
+
+### Задача 4
+1. Запустите в Yandex Cloud ВМ (вам хватит 2 Гб Ram).
+2. Подключитесь к Вм по ssh и установите docker.
+3. Напишите bash-скрипт, который скачает ваш fork-репозиторий в каталог /opt и запустит проект целиком.
+4. Зайдите на сайт проверки http подключений, например(или аналогичный): https://check-host.net/check-http и запустите проверку вашего сервиса http://<внешний_IP-адрес_вашей_ВМ>:8090. Таким образом трафик будет направлен в ingress-proxy. Трафик должен пройти через цепочки: Пользователь → Internet → Nginx → HAProxy → FastAPI(запись в БД) → HAProxy → Nginx → Internet → Пользователь
+5. (Необязательная часть) Дополнительно настройте remote ssh context к вашему серверу. Отобразите список контекстов и результат удаленного выполнения docker ps -a
+6. Повторите SQL-запрос на сервере и приложите скриншот и ссылку на fork.
+
+### Ответ 4
+
+![alt text](Pictures/pic05.jpg)
+
+скрипт
+
+```bash
+#!/bin/bash
+
+cd /opt
+
+git clone https://github.com/Anton-Shcherbatykh/FOPS-38_15-05.git
+
+cd FOPS-38_15-05
+
+docker compose up --build -d
+```
+
+![alt text](Pictures/pic04.jpg)
+
+![alt text](Pictures/pic06.jpg)
