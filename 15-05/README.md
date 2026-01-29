@@ -95,3 +95,16 @@ docker compose up --build -d
 ![alt text](Pictures/pic04.jpg)
 
 ![alt text](Pictures/pic06.jpg)
+
+### Задача 6
+Скачайте docker образ hashicorp/terraform:latest и скопируйте бинарный файл /bin/terraform на свою локальную машину, используя dive и docker save. Предоставьте скриншоты действий .
+
+![alt text](Pictures/pic07.jpg)
+
+![alt text](Pictures/pic08.jpg)
+
+![alt text](Pictures/pic09.jpg)
+
+![alt text](Pictures/pic010.jpg)
+
+![alt text](Pictures/pic011.jpg)
