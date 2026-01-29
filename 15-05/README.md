@@ -108,3 +108,10 @@ docker compose up --build -d
 ![alt text](Pictures/pic010.jpg)
 
 ![alt text](Pictures/pic011.jpg)
+
+### Задача 6.1
+Добейтесь аналогичного результата, используя docker cp.
+
+Предоставьте скриншоты действий .
+
+![alt text](Pictures/pic012.jpg)
